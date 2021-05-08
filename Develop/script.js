@@ -38,19 +38,20 @@ function generatePassword() {
     return "You must choose at least one option."
   }
   console.log(combinedChars)
- 
-  const random = new Random();
+ if (parseInt(lengthOfPassword) < 8 || parseInt(lengthOfPassword) > 120){
+   return "Must be between 8 and 120 characters"
+ }
+  
   let password = ""
-  password[0] = lowerCaseLetters.charAt(random.nextInt(lowerCaseLetters.length()));
-  password[1] = capitalCaseLetters.charAt(random.nextInt(capitalCaseLetters.length()));
-  password[2] = specialCharacters.charAt(random.nextInt(specialCharacters.length()));
-  password[3] = numbers.charAt(random.nextInt(numbers.length()));
+ 
 
-  for (let i = 0; i < length; i++) {
-    password[i] = combinedChars.charAt(random.nextInt(combinedChars.length()));
-    return password;
+  for (let i = 1; i < parseInt(lengthOfPassword); i++) {
+    var index = Math.floor(Math.random() * combinedChars.length)
+    password += combinedChars[index]
+   
   }
-  console.log
+  console.log(password)
+  return password
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
