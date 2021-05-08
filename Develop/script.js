@@ -16,11 +16,11 @@ function generatePassword() {
   const specialCharacters = ['!', '@', '#', '$'];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   let combinedChars = []
-  let yesUpperCase = confirm("Do you like Upper case letters ?")
-  let yesLowerCase = confirm("Do you like Lower case letters ?")
-  let yesSpecialCharacters = confirm("Do you like special characters ?")
-  let yesNumbers = confirm("Do you like numbers ?")
-  let lengthOfPassword = prompt("How long do you want your password ?")
+  let yesUpperCase = confirm("Do you like upper case letters?")
+  let yesLowerCase = confirm("Do you like lower case letters?")
+  let yesSpecialCharacters = confirm("Do you like special characters?")
+  let yesNumbers = confirm("Do you like numbers?")
+  let lengthOfPassword = prompt("How long do you want your password?")
   if (yesUpperCase) {
     combinedChars = combinedChars.concat(capitalCaseLetters)
     // console.log(yesUpperCase,combinedChars)
