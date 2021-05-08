@@ -23,7 +23,6 @@ function generatePassword() {
   let lengthOfPassword = prompt("How long do you want your password?")
   if (yesUpperCase) {
     combinedChars = combinedChars.concat(capitalCaseLetters)
-    // console.log(yesUpperCase,combinedChars)
   }
   if (yesLowerCase) {
     combinedChars = combinedChars.concat(lowerCaseLetters)
